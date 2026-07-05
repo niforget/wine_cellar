@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "slug": "cave_a_vin",
+  "name": "Cave à vin partagée",
+  "description": "Gestion de cave à vin partagée : caves, fiches de vin, OCR d'étiquette, stock, dégustations, enrichissement IA.",
+  "image": "ghcr.io/niforget/wine_cellar-{arch}",
+  "arch": ["aarch64", "armv7", "amd64"],
+  "homeassistant": "2024.1.0",
+  "author": "niforget",
+  "url": "https://github.com/niforget/wine_cellar",
+  "startup": "application",
+  "boot": "auto",
+  "options": {
+    "anthropic_api_key": ""
+  },
+  "schema": {
+    "anthropic_api_key": "str?"
+  }
+}
