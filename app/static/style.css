@@ -1,0 +1,180 @@
+:root {
+  --couleur-fond: #faf7f2;
+  --couleur-texte: #2b1d14;
+  --couleur-accent: #7a1f2b;
+  --couleur-accent-clair: #a8394a;
+  --couleur-carte: #ffffff;
+  --couleur-bordure: #e3dcd3;
+  --rayon: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--couleur-fond);
+  color: var(--couleur-texte);
+  padding-bottom: 70px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--couleur-accent);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.topbar h1 { font-size: 18px; margin: 0; }
+.topbar select { padding: 6px; border-radius: 6px; border: none; }
+
+.tabs {
+  display: flex;
+  background: var(--couleur-carte);
+  border-bottom: 1px solid var(--couleur-bordure);
+  position: sticky;
+  top: 52px;
+  z-index: 9;
+}
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  color: #8a7d70;
+  border-bottom: 3px solid transparent;
+}
+.tab-btn.actif {
+  color: var(--couleur-accent);
+  border-bottom-color: var(--couleur-accent);
+  font-weight: 600;
+}
+
+main { padding: 12px; max-width: 720px; margin: 0 auto; }
+
+.carte {
+  background: var(--couleur-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.carte-titre { font-weight: 600; font-size: 16px; margin: 0 0 4px 0; }
+.carte-sous-titre { color: #8a7d70; font-size: 13px; }
+
+.bouton {
+  background: var(--couleur-accent);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--rayon);
+  font-size: 15px;
+  cursor: pointer;
+}
+.bouton:active { background: var(--couleur-accent-clair); }
+.bouton.secondaire {
+  background: transparent;
+  color: var(--couleur-accent);
+  border: 1px solid var(--couleur-accent);
+}
+.bouton.danger { background: #b23a3a; }
+.bouton-bloc { display: block; width: 100%; margin-top: 8px; }
+
+.champ { margin-bottom: 10px; }
+.champ label { display: block; font-size: 13px; color: #6b5f54; margin-bottom: 4px; }
+.champ input, .champ select, .champ textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+  color: var(--couleur-texte);
+}
+.champ textarea { min-height: 70px; }
+
+.ligne-form { display: flex; gap: 8px; }
+.ligne-form .champ { flex: 1; }
+
+.grille-cave {
+  display: grid;
+  gap: 4px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+.case-cave {
+  aspect-ratio: 1;
+  min-width: 28px;
+  border-radius: 4px;
+  border: 1px solid var(--couleur-bordure);
+  background: #f1ece5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  cursor: pointer;
+}
+.case-cave.occupee { background: var(--couleur-accent); color: white; }
+
+.liste-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--couleur-bordure);
+  cursor: pointer;
+}
+.liste-item:last-child { border-bottom: none; }
+.badge {
+  background: #efe6da;
+  color: var(--couleur-accent);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex; align-items: flex-end;
+  z-index: 100;
+}
+.modal-overlay.masque { display: none; }
+.modal {
+  background: white;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 16px 16px 0 0;
+  padding: 18px;
+}
+@media (min-width: 640px) {
+  .modal-overlay { align-items: center; justify-content: center; }
+  .modal { width: 560px; border-radius: 16px; }
+}
+
+.onglets-secondaires { display: flex; gap: 6px; margin: 10px 0; flex-wrap: wrap; }
+.onglet-sec {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--couleur-bordure);
+  background: white;
+  font-size: 13px;
+}
+.onglet-sec.actif { background: var(--couleur-accent); color: white; border-color: var(--couleur-accent); }
+
+.texte-discret { color: #8a7d70; font-size: 13px; }
+.zone-photo {
+  border: 2px dashed var(--couleur-bordure);
+  border-radius: var(--rayon);
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 12px;
+}

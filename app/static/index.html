@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Cave à vin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>🍷 Cave à vin</h1>
+  <select id="selecteur-utilisateur"></select>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn actif" data-vue="caves">Caves</button>
+  <button class="tab-btn" data-vue="vins">Vins</button>
+  <button class="tab-btn" data-vue="ajouter">Ajouter</button>
+</nav>
+
+<main id="app"></main>
+
+<div id="modal-overlay" class="modal-overlay masque">
+  <div class="modal" id="modal-contenu"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
