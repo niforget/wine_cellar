@@ -68,7 +68,7 @@ Reponds UNIQUEMENT avec un objet JSON valide, sans texte autour, avec exactement
         )
         champs = json.loads(texte_reponse)
         return {"ok": True, "champs": champs, "modele": modele}
-    except requests.exceptions.RequestException as e:
-        return {"ok": False, "erreur": f"Erreur reseau/API : {e}"}
-    except (json.JSONDecodeError, ValueError) as e:
-        return {"ok": False, "erreur": f"Reponse IA non exploitable : {e}"}
+    except requests.exceptions.RequestException:
+        return {"ok": False, "erreur": "Erreur reseau/API lors de l'enrichissement IA."}
+    except (json.JSONDecodeError, ValueError):
+        return {"ok": False, "erreur": "Reponse IA non exploitable."}
