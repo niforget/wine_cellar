@@ -2,7 +2,7 @@ name: "Cave à vin partagée"
 version: "0.1.0"
 slug: "cave_a_vin"
 description: "Gestion de cave à vin partagée (remplace PLOC) : caves, fiches de vin, OCR d'étiquette, stock, dégustations, enrichissement IA."
-url: ""
+url: "https://github.com/niforget/wine_cellar"
 arch:
   - aarch64
   - armv7

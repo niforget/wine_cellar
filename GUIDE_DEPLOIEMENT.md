@@ -1,6 +1,6 @@
 # Déployer l'application dans Home Assistant
 
-Ce dossier (`cave_a_vin_addon/`) est un add-on Home Assistant complet :
+Le dossier `cave_a_vin/` de ce repository est un add-on Home Assistant complet :
 backend FastAPI + interface web + OCR + enrichissement IA, packagé avec
 Dockerfile et config.yaml. Ce guide explique comment l'installer sur le
 Raspberry Pi et y charger tes données déjà migrées de PLOC.
@@ -21,7 +21,7 @@ de la machine qui héberge HA. Le plus simple pour y accéder :
    depuis Paramètres → Add-ons → Boutique d'add-ons (si ce n'est pas déjà fait).
 2. Connecte-toi au partage réseau du Pi (ou ouvre le terminal de Studio Code
    Server) et crée le dossier `/addons/cave_a_vin/`.
-3. Copie-y tout le contenu de ce dossier `cave_a_vin_addon/` (config.yaml,
+3. Copie-y tout le contenu du dossier `cave_a_vin/` (config.yaml,
    Dockerfile, run.sh, requirements.txt, le dossier `app/`).
 
 ## 2. Installer et démarrer l'add-on
